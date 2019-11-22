@@ -26,15 +26,32 @@ arr.filter(function (currentValue) {
 
         return currentValue %2 === 0;
 
-}
+})
 
 }
 
 
 function sumArray(arr) {
 
-    return console.log( Math.max(arr);
 
+    return arr.reduce(function (sum , current) {
+        return sum + current
 
+    })
+
+    
 };
 
+
+function maxArrayElements(arr) {
+
+    return Math.max(...arr);
+
+    
+};
+
+
+
+function add () {
+    
+}
