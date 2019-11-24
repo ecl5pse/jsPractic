@@ -52,6 +52,21 @@ function maxArrayElements(arr) {
 
 
 
-function add () {
+function add ( index , arr , elemet) {
+
+
+    arr.splice(index ,0 ,elemet);
+
+    return console.log(arr);
+
     
+}
+
+
+function arrDeleteElement( index , arr , deleteCounter ) {
+
+
+    arr.splice(index ,deleteCounter);
+    return console.log(arr);
+
 }
