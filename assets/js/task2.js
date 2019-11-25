@@ -1,15 +1,20 @@
 'use strict';
 
 function getRundomNumber(to) {
-    return Math.floor( Math.random() * to );
+    return Math.floor(Math.random() * to);
 
 }
+
+/*
+1. Функция принимает массив и выводит его на экран.
+
+ */
 
 
 function getRandomArray(length) {
     const arr = [];
 
-    for (let i = 0; i < length; i++){
+    for (let i = 0; i < length; i++) {
 
         arr.push(getRundomNumber(666))
 
@@ -18,16 +23,18 @@ function getRandomArray(length) {
 
 }
 
-const arr= getRandomArray(10);
+const arr = getRandomArray(10);
 
 
+function logArrayItems(arr) {
 
-
-
-
-function  printArray    (arr) {
-
-    return console.log(arr);
+    if (Array.isArray(arr)) {
+        arr.forEach(
+            currentElem => {
+                console.log(currentElem);
+            }
+        );
+    }
 
 }
 
@@ -38,54 +45,50 @@ function  printArray    (arr) {
 
  */
 
-function printEvenArray(arr) {
+function getEvenItems(arr) {
 
-arr.filter(function (currentValue) {
+    return arr.filter(function (currentValue) {
 
-        return currentValue %2 === 0;
+        return currentValue % 2 === 0;
 
-})
-    return arr;
-
+    });
 }
 
 
 function sumArray(arr) {
 
 
-    return arr.reduce(function (sum , current) {
+    return arr.reduce(function (sum, current) {
         return sum + current
 
     })
 
-    
-};
 
-
-function maxArrayElements(arr) {
-
-    return Math.max(...arr);
-
-    
-};
-
-
-
-function add ( index , arr , elemet) {
-
-
-    arr.splice(index ,0 ,elemet);
-
-    return console.log(arr);
-
-    
 }
 
 
-function arrDeleteElement( index , arr , deleteCounter ) {
+function maxArrayElement(arr) {
+
+    return Math.max(...arr);
+
+}
 
 
-    arr.splice(index ,deleteCounter);
-    return console.log(arr);
+function add(elem, index, arr) {
+
+
+    arr.splice(index, 0, elem);
+
+    return arr;
+
+
+}
+
+
+function arrDeleteElement(index, arr, deleteCounter) {
+
+
+    arr.splice(index, deleteCounter);
+    return arr;
 
 }
